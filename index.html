@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Burger Bar</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="./images/icons/favicon.png" type="image/x-icon">
+<script src="https://kit.fontawesome.com/5b96514e4c.js" crossorigin="anonymous"></script>
+
+  <!-- <link rel="stylesheet" href="./bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css"> -->
+  <!-- <link rel="stylesheet" href="./bootstrap-5.3.0-alpha1-dist/css/bootstrap.css"> -->
+  <!-- <script src="./bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script> -->
+  <!-- <script src="./bootstrap-5.3.0-alpha1-dist/js/bootstrap.js"></script> -->
+
+</head>
+
+<body>
+
+<div id="preloader"></div>
+
+
+  <!-- NAVBAR -->
+
+  <nav class="mx-2 navbar navbar-expand-lg navbar-light justify-content-center d-flex fixed-top"
+    aria-label="Offcanvas navbar large">
+    <div class="container nav">
+      <a class="navbar-brand" href="#">
+        <img src="./images/icons/bblogo.png" alt="Bootstrap" width="110" height="50" class="logo">
+      </a>
+      <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar">
+       <img src="./images/icons/menu.png" width="35" height="auto">
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-light" tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Burger Bar</h5>
+          <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item under-hover">
+              <a class="nav-link active" aria-current="page" href="#hero">Home</a>
+            </li>
+            <li class="nav-item under-hover">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item under-hover">
+              <a class="nav-link" href="#menu">Menu</a>
+            </li>
+            <li class="nav-item under-hover">
+              <a class="nav-link" href="#events">Events</a>
+            </li>
+            <li class="nav-item under-hover">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item under-hover">
+              <a class="nav-link" href="#gallery">Gallery</a>
+            </li>
+
+          </ul>
+          <button class="btn btn-danger rounded-pill px-4 py-2" type="button" data-bs-toggle="modal"
+            data-bs-target="#signup">Sign Up</button>
+          <button class="btn btn-warning rounded-pill ms-1 px-4 py-2" type="button" data-bs-toggle="modal"
+            data-bs-target="#login">Log In</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- NAVBAR -->
+
+
+
+
+
+
+
+  <!-- SIGN UP Modal -->
+  <div class="modal fade" id="signup" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content pattern-bg rounded-4 shadow">
+        <div class="modal-header p-5 pb-4 border-bottom-0">
+          <h1 class="fw-bold mb-0 fs-2">Sign up for free</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body p-5 pt-0">
+          <form class="">
+            <div class="row g-2">
+              <div class="col-md mb-3">
+                <div class="form-floating">
+                  <input type="text" class="form-control sign-form" id="sign-item1" placeholder="First Name">
+                  <label for="floatingInputGrid" class="text-light-emphasis"><i class="fa-solid fa-user me-1 text-danger"></i> First Name</label>
+                </div>
+              </div>
+              <div class="col-md mb-3">
+                <div class="form-floating">
+                  <input type="text" class="form-control sign-form" id="sign-item2" placeholder="Last Name">
+                  <label for="floatingInputGrid" class="text-light-emphasis"><i class="fa-solid fa-user me-1 text-danger"></i> Last Name</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control sign-form" id="sign-item3" placeholder="name@example.com">
+              <label for="floatingInput" class="text-light-emphasis"><i class="fa-solid fa-envelope me-1 text-danger"></i> Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control sign-form" id="sign-item4" placeholder="Password">
+              <label for="floatingPassword" class="text-light-emphasis"><i class="fa-solid fa-lock me-1 text-danger"></i> Password</label>
+            </div>
+            <button class="w-100 mb-2 btn btn-lg rounded-3 btn-danger rounded-pill" type="submit">Sign up <i class="fa-solid fa-right-to-bracket ms-1"></i></button>
+            <small class="text-muted"><a href="#" class="text-danger" data-bs-toggle="modal"
+            data-bs-target="#login">Log In</a>&nbsp;&nbsp;If you already have an Account.</small>
+            <hr class="my-4">
+            <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+            <button class="w-100 py-2 mb-2 btn bg-warning border-danger rounded-3" type="submit">
+              <img src="./images/icons/google dark.png" alt="" width="16" height="auto" class="me-1">
+              Google
+            </button>
+            <button class="w-100 py-2 mb-2 btn bg-warning border-danger rounded-3" type="submit">
+              <img src="./images/icons/facebook dark.png" alt="" width="16" height="auto" class="me-1">
+              Facebook
+            </button>
+            <button class="w-100 py-2 mb-2 btn bg-warning border-danger rounded-3" type="submit">
+              <img src="./images/icons/twitter dark.png" alt="" width="16" height="auto" class="me-1">
+              Twitter
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- SIGN UP Modal -->
+
+
+  <!-- LOG IN Modal -->
+  <div class="modal fade" id="login" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content pattern-bg rounded-4 shadow ">
+        <div class="modal-header p-5 pb-4 border-bottom-0">
+          <h1 class="fw-bold mb-0 fs-2">Log In Now</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body p-5 pt-0">
+          <form class="">
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control log-form" id="log-item1" placeholder="name@example.com">
+              <label for="floatingInput"><i class="fa-solid fa-envelope me-1 text-danger"></i> Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control log-form" id="log-item2" placeholder="Password">
+              <label for="floatingPassword"><i class="fa-solid fa-lock me-1 text-danger"></i> Password</label>
+            </div>
+            <button class="w-100 mb-2 btn btn-lg rounded-3 btn-danger rounded-pill" type="submit">Log In <i class="fa-solid fa-right-to-bracket ms-1"></i></button>
+            <small class="text-muted"><a href="#" class="text-danger" data-bs-toggle="modal" data-bs-target="#signup">Sign Up</a>&nbsp&nbspIf you don't have an Account.</small>
+            <hr class="my-4">
+            <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+            <button class="w-100 py-2 mb-2 btn bg-warning border-danger rounded-3" type="submit">
+              <img src="./images/icons/google dark.png" alt="" width="16" height="auto" class="me-1">
+               Google
+            </button>
+            <button class="w-100 py-2 mb-2 btn bg-warning border-danger rounded-3" type="submit">
+              <img src="./images/icons/facebook dark.png" alt="" width="16" height="auto" class="me-1">
+               Facebook
+            </button>
+            <button class="w-100 py-2 mb-2 btn bg-warning border-danger rounded-3" type="submit">
+              <img src="./images/icons/twitter dark.png" alt="" width="16" height="auto" class="me-1">
+               Twitter
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- LOG IN Modal -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- HERO -->
+  <section id="hero" class="hero-bg">
+    <div class="container px-4 py-10 ">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6 res-img">
+          <img src="./images/burgers/burger-10956.png" class="d-block mx-lg-auto img-fluid " width="700" height="500"
+            loading="lazy">
+        </div>
+        <div class="col-lg-6 text-center di-center res-hero">
+          <h1 class="display-5 fw-bold lh-1 st-font res-font">The Burger Bar <br><span class="sm-font">Stay
+              Hungry</span></h1>
+          <p class="lead text-muted bb-des">Welcome to Burger Bar, the ultimate destination for burger lovers! Whether you're
+            in the mood for a classic cheeseburger or a gourmet creation, we have something for everyone. Come and
+            experience the ultimate burger experience at Burger Bar!</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <button class="btn btn-danger rounded-pill px-4 py-2 btn-lg s-btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#booking">Book a Table</button>
+            <button class="btn btn-warning rounded-pill px-4 py-2 btn-lg s-btn" type="button"><a href="#menu" class="text-light text-decoration-none">Order Now</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- HERO -->
+
+
+
+
+<!-- BOOK TABLE -->
+
+<div class="modal book-modal fade" id="booking" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content pattern-bg px-3 py-3">
+      <div class="modal-header">
+        <h1 class="modal-title fs-3" id="exampleModalLabel"> Book a Table</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+
+
+<form class="row g-3">
+  
+  <div class="col-md-6">
+    <label for="f-name" class="form-label">First Name</label>
+    <input type="text" class="form-control" id="f-name" placeholder="Enter Your First Name">
+  </div>
+  <div class="col-md-6">
+    <label for="l-name" class="form-label">Last Name</label>
+    <input type="text" class="form-control" id="l-name" placeholder="Enter Your Last Name">
+  </div>
+  <div class="col-md-6">
+    <label for="book-email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="book-email" placeholder="Enter Your Email">
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Phone Number</label>
+    <input type="tel" class="form-control" id="inputPassword4" placeholder="Enter Your Phone Number">
+  </div>
+  <div class="col-md-6">
+    <label for="book-date" class="form-label">Reservation Date</label>
+    <input type="date" class="form-control" id="book-date" >
+  </div>
+  <div class="col-md-6">
+    <label for="book-time" class="form-label">Reservation Time</label>
+    <input type="time" class="form-control" id="book-time">
+  </div>
+
+  <div class="col-md-5">
+    <label for="inputState" class="form-label">City</label>
+    <select id="inputState" class="form-select">
+      <option selected>Choose...</option>
+      <option>Lahore</option>
+    </select>
+  </div>
+  <div class="col-md-5">
+    <label for="inputarea" class="form-label">Area</label>
+    <select id="inputarea" class="form-select">
+      <option selected>Choose...</option>
+      <option>R.A Bazar</option>
+      <option>Sadar</option>
+      <option>D.H.A</option>
+    </select>
+  </div>
+  <div class="col-md-2">
+    <label for="book-mem" class="form-label">Members</label>
+    <input type="number" class="form-control" id="book-mem">
+  </div>
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Confirm Your Table
+      </label>
+    </div>
+  </div>
+</form>
+
+
+      </div>
+      <div class="modal-footer justify-content-between">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+        <button type="submit" class="btn btn-warning">Book Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- BOOK TABLE -->
+
+
+
+
+
+
+
+
+
+
+
+  <!-- features -->
+  <section id="features" class="back">
+
+    <div class="container px-5 py-5 feat " id="featured-3">
+      <h1 class="pb-2 text-center fh-1 heading"><span class="text-decoration-underline ">Fea</span>tures</h1>
+      <div class="row g-3 py-5 row-cols-sm-2 row-cols-lg-4 text-center">
+        <a class="feat-box">
+          <div class="feature col d-css">
+            <div
+              class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-danger rounded bg-gradient fs-2 mb-3 p-3">
+              <img src="./images/icons/food.png" alt="TBB" width="60em" height="60em">
+            </div>
+            <h3 class="fs-2">Delicious Food</h3>
+            <p class="px-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate omnis incidunt
+              repudiandae.</p>
+
+          </div>
+        </a>
+        <a class="feat-box">
+          <div class="feature col d-css">
+            <div
+              class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-danger bg-gradient fs-2 mb-3 p-3 rounded">
+              <img src="./images/icons/variety.png" alt="TBB" width="60em" height="60em">
+            </div>
+            <h3 class="fs-2">Large Variety</h3>
+            <p class="px-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate omnis incidunt
+              repudiandae.</p>
+
+          </div>
+        </a>
+        <a class="feat-box">
+          <div class="feature col d-css">
+            <div
+              class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-danger bg-gradient fs-2 mb-3 p-3 rounded">
+              <img src="./images/icons/chef.png" alt="TBB" width="60em" height="60em">
+            </div>
+            <h3 class="fs-2">Great Chiefs</h3>
+            <p class="px-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate omnis incidunt
+              repudiandae.</p>
+
+          </div>
+        </a>
+        <a class="feat-box">
+          <div class="feature col d-css">
+            <div
+              class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-danger rounded bg-gradient fs-2 mb-3 p-3">
+              <img src="./images/icons/fast-delivery.png" alt="TBB" width="60em" height="60em">
+            </div>
+            <h3 class="fs-2">Fast Delivery</h3>
+            <p class="px-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate omnis incidunt
+              repudiandae.</p>
+
+          </div>
+        </a>
+
+
+      </div>
+    </div>
+  </section>
+  <!-- features -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- MENU -->
+
+
+
+
+  <section id="menu">
+    <h1 class="mt-5 text-center fh-1 heading" id="menu"><span class="text-decoration-underline ">Me</span>nu</h1>
+
+
+
+
+    <ul class="nav nav-pills my-5 justify-content-center" id="pills-tab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+          type="button" role="tab" aria-controls="pills-home" aria-selected="true">Burgers</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+          type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Pizza</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+          type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Desserts</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-deals-tab" data-bs-toggle="pill" data-bs-target="#pills-deals" type="button"
+          role="tab" aria-controls="pills-deals" aria-selected="false">Luxurious</button>
+      </li>
+    </ul>
+    <div class="tab-content my-5" id="pills-tabContent">
+
+      <!-- DEALS -->
+
+
+      <div class="container tab-pane fade show" id="pills-deals" role="tabpanel" aria-labelledby="pills-deals-tab"
+        tabindex="0">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+
+
+          <div class="col">
+            <div class="card shadow lux-card event-card h-100">
+              <img src="./images/burgers/specials/iron.jfif" class="card-img-top" alt="...">
+              <div class="card-body gold-bg">
+                <h1 class="card-title">Luxurious</h1>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, nesciunt!</p>
+                <button class="btn btn-dark btn-lg">Bet Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow lux-card event-card h-100">
+              <img src="./images/burgers/specials/fantasy.jfif" class="card-img-top" alt="...">
+              <div class="card-body gold-bg">
+                <h1 class="card-title">Luxurious</h1>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, nesciunt!</p>
+                <button class="btn btn-dark btn-lg">Bet Now</button>
+
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow lux-card event-card h-100">
+              <img src="./images/burgers/specials/gold.jfif" class="card-img-top" alt="...">
+              <div class="card-body gold-bg">
+                <h1 class="card-title">Luxurious</h1>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, nesciunt!</p>
+                <button class="btn btn-dark btn-lg">Bet Now</button>
+
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow lux-card event-card h-100">
+              <img src="./images/burgers/specials/mario.jfif" class="card-img-top" alt="...">
+              <div class="card-body gold-bg">
+                <h1 class="card-title">Luxurious</h1>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, nesciunt!</p>
+                <button class="btn btn-dark btn-lg">Bet Now</button>
+
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow lux-card event-card h-100">
+              <img src="./images/burgers/specials/black.jfif" class="card-img-top" alt="...">
+              <div class="card-body gold-bg">
+                <h1 class="card-title">Luxurious</h1>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, nesciunt!</p>
+                <button class="btn btn-dark btn-lg">Bet Now</button>
+
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow lux-card event-card h-100">
+              <img src="./images/burgers/specials/hulk.jfif" class="card-img-top" alt="...">
+              <div class="card-body gold-bg">
+                <h1 class="card-title">Luxurious</h1>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, nesciunt!</p>
+                <button class="btn btn-dark btn-lg">Bet Now</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- DEALS -->
+
+
+
+
+
+
+      <!-- BURGERS -->
+
+      <div class="container tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+        tabindex="0">
+
+        <div class="row row-cols-1 row-cols-md-3 g-4 text-center">
+          <div class="col cd-p">
+            <div class="card h-100 card-h  shadow">
+              <img src="./images/burgers/zinger.png" class="card-img-top pt-4" alt="...">
+              <div class="card-body">
+                <h1 class="card-title ">Zinger Burger </h1>
+                <!-- <p class="card-text">Chicken breast fillet, bread crumbs, all-purpose flour, paprika, mayonnaise</p> -->
+                <div class="res-dis mt-3 d-flex justify-content-between align-items-center bg-mine">
+                  <h1 class="price">$10.00</h1>
+                  <button class="btn  btn-cart btn-lg btn-danger" type="button" class="btn btn-primary"
+                    data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Now</button>
+                </div>
+              </div>
+            </div>
+            <div class="my-modal modal fade mb-5 " id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false"
+            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog ">
+              <div class="modal-content bg-danger-light">
+
+                <div class="modal-body ">
+                  <div class="col">
+                    <div class="col"><img src="./images/burgers/modal img/zinger.jpg" class="card-img-top rounded-4" alt="...">
+                    </div>
+                    <div class="row justify-content-center">
+                      <h1 class="mt-3 card-title">Zinger Burger</h1>
+                      <div class="stars d-flex align-items-center justify-content-center my-2">
+                        <i class="fa-solid fa-star checked"></i>
+                        <i class="fa-solid fa-star checked"></i>
+                        <i class="fa-solid fa-star checked"></i>
+                        <i class="fa-solid fa-star checked"></i>
+                        <i class="fa-solid fa-star-half-stroke checked"></i>
+                      </div>
+                      <p>Chicken breast fillet, bread crumbs, all-purpose flour, paprika, mayonnaise</p>
+                      <div class="mt-3 d-flex justify-content-between align-items-center modal-bg-mine bg-mine">
+                        <h1 class="price">$10.00</h1>
+                        <div class="form-outline d-flex align-items-center">
+                          <label for="typeNumber" class="me-2">Quantity:</label>
+                          <input type="number" id="typeNumber" class="form-control bg-danger text-light" min="1"
+                            max="100" placeholder="0" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer justify-content-between">
+                  <button type="button" class="btn btn-danger px-4" data-bs-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-warning px-4">Check Out</button>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+
+
+
+
+          <!-- Modal -->
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div class="col cd-p">
+            <div class="card h-100 card-h shadow">
+              <img src="./images/burgers/pngwing.com.png" class="card-img-top pt-4" alt="...">
+              <div class="card-body">
+                <h1 class="card-title">Beef Burger </h1>
+                <!-- <p class="card-text">Ground beef, Pepper, Onion, Worcestershire sauce, Lettuce, Cheese</p> -->
+                <div class="res-dis mt-3 d-flex justify-content-between align-items-center bg-mine">
+                  <h1 class="price">$10.00</h1>
+                  <button class="btn  btn-cart btn-lg btn-danger">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+          <div class="col cd-p">
+            <div class="card h-100 card-h shadow">
+              <img src="./images/burgers/veg.png" class="card-img-top pt-4" alt="...">
+              <div class="card-body">
+                <h1 class="card-title">Veggie Burger</h1>
+                <!-- <p class="card-text">Pure Veggie, mushrooms, oats, onion, garlic, eggplant, zucchini</p> -->
+                <div class="res-dis mt-3 d-flex justify-content-between align-items-center bg-mine">
+                  <h1 class="price">$10.00</h1>
+                  <button class="btn  btn-cart btn-lg btn-danger" type="button" class="btn btn-primary"
+                    data-bs-toggle="modal" data-bs-target="#veggie">Buy Now</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+
+          <div class="col cd-p">
+            <div class="card h-100 card-h shadow">
+              <img src="./images/burgers/cheese burger.png" class="card-img-top pt-4" alt="...">
+              <div class="card-body">
+                <h1 class="card-title">Cheese Burger</h1>
+                <!-- <p class="card-text">Lots of Cheese, mozerilla cheese, ground beef, more cheese</p> -->
+                <div class="res-dis mt-3 d-flex justify-content-between align-items-center bg-mine">
+                  <h1 class="price">$10.00</h1>
+                  <button class="btn  btn-cart btn-lg btn-danger">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+          <div class="col cd-p">
+            <div class="card h-100 card-h shadow">
+              <img src="./images/burgers/double.png" class="card-img-top pt-4" alt="...">
+              <div class="card-body">
+                <h1 class="card-title">Double Burger</h1>
+                <!-- <p class="card-text">2 beef Paties, Double Cheese, Worcestershire sauce, Lettuce </p> -->
+                <div class="res-dis mt-3 d-flex justify-content-between align-items-center bg-mine">
+                  <h1 class="price">$10.00</h1>
+                  <button class="btn  btn-cart btn-lg btn-danger">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          
+          <div class="col cd-p">
+            <div class="card h-100 card-h shadow">
+              <img src="./images/burgers/fish-burger.png" class="card-img-top pt-4" alt="...">
+              <div class="card-body">
+                <h1 class="card-title">Fish Burger</h1>
+                <!-- <p class="card-text">Fish Piece, Cheese, Worcestershire sauce, Lettuce </p> -->
+                <div class="res-dis mt-3 d-flex justify-content-between align-items-center bg-mine">
+                  <h1 class="price">$10.00</h1>
+                  <button class="btn  btn-cart btn-lg btn-danger">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- BURGERS -->
+
+
+
+
+
+      <!-- PIZZA -->
+
+
+      <div class="container tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+        tabindex="0">
+        <div class="row row-cols-1 row-cols-md-3 g-4 text-center">
+          <div class="col cd-p">
+            <div class="card h-100 card-h ">
+              <img src="./images/pizza/pizza.png" class="card-img-top pt-4" alt="...">
+              <div class="card-body">
+                <h1 class="card-title">Classic Pizza</h1>
+                <div class="res-dis mt-3 d-flex justify-content-between align-items-center bg-mine">
+                  <h1 class="price">$10.00</h1>
+                  <button class="btn  btn-cart btn-lg btn-danger">Buy Now</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="col cd-p">
+            <div class="card h-100 card-h">
+              <img src="./images/pizza/tikka.png" class="card-img-top pt-4" alt="...">
+              <div class="card-body">
+                <h1 class="card-title">Chicken Tikka</h1>
+                <div class="res-dis mt-3 d-flex justify-content-between align-items-center bg-mine">
+                  <h1 class="price">$10.00</h1>
+                  <button class="btn  btn-cart btn-lg btn-danger">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col cd-p">
+            <div class="card h-100 card-h">
+              <img src="./images/pizza/pizza-png-19323.png" class="card-img-top pt-4" alt="...">
+              <div class="card-body">
+                <h1 class="card-title">Chicken Fajita</h1>
+                <div class="res-dis mt-3 d-flex justify-content-between align-items-center bg-mine">
+                  <h1 class="price">$10.00</h1>
+                  <button class="btn  btn-cart btn-lg btn-danger">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col cd-p">
+            <div class="card h-100 card-h">
+              <img src="./images/pizza/veggie.png" class="card-img-top pt-4" alt="...">
+              <div class="card-body">
+                <h1 class="card-title">Veggie Pizza</h1>
+                <div class="res-dis mt-3 d-flex justify-content-between align-items-center bg-mine">
+                  <h1 class="price">$10.00</h1>
+                  <button class="btn  btn-cart btn-lg btn-danger">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col cd-p">
+            <div class="card h-100 card-h">
+              <img src="./images/pizza/pepperoni.png" class="card-img-top pt-4" alt="...">
+              <div class="card-body">
+                <h1 class="card-title">Pepperoni Pizza</h1>
+                <div class="res-dis mt-3 d-flex justify-content-between align-items-center bg-mine">
+                  <h1 class="price">$10.00</h1>
+                  <button class="btn  btn-cart btn-lg btn-danger">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col cd-p">
+            <div class="card h-100 card-h">
+              <img src="./images/pizza/pizza.png" class="card-img-top pt-4" alt="...">
+              <div class="card-body">
+                <h1 class="card-title">Afghani Feast</h1>
+                <div class="res-dis mt-3 d-flex justify-content-between align-items-center bg-mine">
+                  <h1 class="price">$10.00</h1>
+                  <button class="btn  btn-cart btn-lg btn-danger">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- PIZZA -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- DESSERTS -->
+
+      <div class="container tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
+        tabindex="0">
+        <div class="row row-cols-1 row-cols-md-3 g-4 text-center">
+          <div class="col cd-p">
+            <div class="card h-100 card-h ">
+              <img src="./images/desserts/cakes.png" class="card-img-top pt-4" alt="...">
+              <div class="card-body">
+                <h1 class="card-title">Cakes</h1>
+                <div class="res-dis mt-3 d-flex justify-content-between align-items-center bg-mine">
+                  <h1 class="price">$10.00</h1>
+                  <button class="btn  btn-cart btn-lg btn-danger">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col cd-p">
+            <div class="card h-100 card-h">
+              <img src="./images/desserts/Ice-Cream.png" class="card-img-top pt-4" alt="...">
+              <div class="card-body">
+                <h1 class="card-title">Ice Creams</h1>
+                <div class="res-dis mt-3 d-flex justify-content-between align-items-center bg-mine">
+                  <h1 class="price">$10.00</h1>
+                  <button class="btn  btn-cart btn-lg btn-danger">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col cd-p">
+            <div class="card h-100 card-h">
+              <img src="./images/desserts/cupcakes.png" class="card-img-top pt-4" alt="...">
+              <div class="card-body">
+                <h1 class="card-title">Cup Cakes</h1>
+                <div class="res-dis mt-3 d-flex justify-content-between align-items-center bg-mine">
+                  <h1 class="price">$10.00</h1>
+                  <button class="btn btn-lg btn-cart  btn-danger">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col cd-p">
+            <div class="card h-100 card-h">
+              <img src="./images/desserts/Puddings.png" class="card-img-top pt-4" alt="...">
+              <div class="card-body">
+                <h1 class="card-title">Puddings</h1>
+                <div class="res-dis mt-3 d-flex justify-content-between align-items-center bg-mine">
+                  <h1 class="price">$10.00</h1>
+                  <button class="btn  btn-cart btn-lg btn-danger">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col cd-p">
+            <div class="card h-100 card-h">
+              <img src="./images/desserts/muffins.png" class="card-img-top pt-4" alt="...">
+              <div class="card-body">
+                <h1 class="card-title">Muffins</h1>
+                <div class="res-dis mt-3 d-flex justify-content-between align-items-center bg-mine">
+                  <h1 class="price">$10.00</h1>
+                  <button class="btn  btn-cart btn-lg btn-danger">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col cd-p">
+            <div class="card h-100 card-h">
+              <img src="./images/desserts/cookies.png" class="card-img-top pt-4" alt="...">
+              <div class="card-body">
+                <h1 class="card-title">Cookies</h1>
+                <div class="res-dis mt-3 d-flex justify-content-between align-items-center bg-mine">
+                  <h1 class="price">$10.00</h1>
+                  <button class="btn btn-lg btn-cart  btn-danger">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DESSERTS -->
+
+
+
+
+
+    </div>
+
+  </section>
+
+
+
+
+<!-- 
+  <section id="news" class="py-5">
+    <div class="container-fluid text-light">
+      <h1 class=" my-2 text-center fh-1" id="menu">Newsletter </h1>
+      <p class="text-center">Stay up-to-date with the latest news from the burger bar team by signing up below</p>
+      <div class="input-group mb-3 container">
+        <input type="text" class="form-control w-50" placeholder="Email Address..." aria-label="Recipient's username"
+          aria-describedby="basic-addon2">
+        <span class="input-group-text" id="basic-addon2">Subscribe</span>
+      </div>
+    </div>
+  </section> -->
+
+
+
+
+
+
+
+
+
+  <section id="events" class="event1">
+
+    <h1 class="my-5 text-center fh-1 heading" id="menu"><span class="text-decoration-underline ">Eve</span>nts</h1>
+    <div id="carouselExampleAutoplaying" class="carousel slide container" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+            <div class="col">
+              <div class="card event-card h-100">
+                <img src="./images/events/custom.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h1 class="card-title">Custom Parties</h1>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, nesciunt!</p>
+                  <a href="#" class="my-a">
+                    <h2 class="price">⇦ Book Now ⇨</h2>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card event-card h-100">
+                <img src="./images/events/private.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h1 class="card-title">Private Parties</h1>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, nesciunt!</p>
+                  <a href="#" class="my-a">
+                    <h2 class="price">⇦ Book Now ⇨</h2>
+                  </a>
+
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card event-card h-100">
+                <img src="./images/events/birthday.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h1 class="card-title">Birthday Parties</h1>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, nesciunt!</p>
+                  <a href="#" class="my-a">
+                    <h2 class="price">⇦ Book Now ⇨</h2>
+                  </a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+       
+       
+       
+        <div class="carousel-item ">
+          <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+            <div class="col">
+              <div class="card event-card h-100">
+                <img src="./images/events/charity.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h1 class="card-title">Charity Events</h1>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, nesciunt!</p>
+                  <a href="#" class="my-a">
+                    <h2 class="price">⇦ Book Now ⇨</h2>
+                  </a>
+
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card event-card h-100">
+                <img src="./images/events/sports.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h1 class="card-title">Sports Arena</h1>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, nesciunt!</p>
+                  <a href="#" class="my-a">
+                    <h2 class="price">⇦ Book Now ⇨</h2>
+                  </a>
+
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card event-card h-100">
+                <img src="./images/events/night theme.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h1 class="card-title">Theme Nights</h1>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, nesciunt!</p>
+                  <a href="#" class="my-a">
+                    <h2 class="price">⇦ Book Now ⇨</h2>
+                  </a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+ 
+        <!-- <div class="carousel-item">
+        <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+          <div class="col">
+            <div class="card event-card h-100">
+              <img src="./images/events/coming soon.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h1 class="card-title">Coming Soon</h1>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, nesciunt!</p>
+                <h2 class="price">Book Now</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      </div>
+      <button class="carousel-control-prev front" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next front" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+
+
+
+
+  <section id="events" class="event2">
+
+    <h1 class="my-5 text-center fh-1 heading" id="menu"><span class="text-decoration-underline ">Eve</span>nts</h1>
+    <div id="carouselExampleAutoplaying2" class="carousel slide container" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
+            <div class="col">
+              <div class="card event-card h-100">
+                <img src="./images/events/custom.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h1 class="card-title">Custom Parties</h1>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, nesciunt!</p>
+                  <a href="#" class="my-a">
+                    <h2 class="price">⇦ Book Now ⇨</h2>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card event-card h-100">
+                <img src="./images/events/private.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h1 class="card-title">Private Parties</h1>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, nesciunt!</p>
+                  <a href="#" class="my-a">
+                    <h2 class="price">⇦ Book Now ⇨</h2>
+                  </a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+       
+       
+       
+        <div class="carousel-item ">
+          <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
+            <div class="col">
+              <div class="card event-card h-100">
+                <img src="./images/events/birthday.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h1 class="card-title">Birthday Parties</h1>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, nesciunt!</p>
+                  <a href="#" class="my-a">
+                    <h2 class="price">⇦ Book Now ⇨</h2>
+                  </a>
+            
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card event-card h-100">
+                <img src="./images/events/charity.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h1 class="card-title">Charity Events</h1>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, nesciunt!</p>
+                  <a href="#" class="my-a">
+                    <h2 class="price">⇦ Book Now ⇨</h2>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="carousel-item ">
+          <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
+          <div class="col">
+            <div class="card event-card h-100">
+              <img src="./images/events/sports.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h1 class="card-title">Sports Arena</h1>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, nesciunt!</p>
+                <a href="#" class="my-a">
+                  <h2 class="price">⇦ Book Now ⇨</h2>
+                </a>
+          
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card event-card h-100">
+              <img src="./images/events/night theme.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h1 class="card-title">Theme Nights</h1>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, nesciunt!</p>
+                <a href="#" class="my-a">
+                  <h2 class="price">⇦ Book Now ⇨</h2>
+                </a>
+          
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+ 
+
+      </div>
+      <button class="carousel-control-prev front" type="button" data-bs-target="#carouselExampleAutoplaying2"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next front" type="button" data-bs-target="#carouselExampleAutoplaying2"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+
+
+
+  <section id="events" class="event3">
+
+    <h1 class="my-5 text-center fh-1 heading" id="menu"><span class="text-decoration-underline ">Eve</span>nts</h1>
+    <div id="carouselExampleAutoplaying3" class="carousel slide container" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <div class="row row-cols-1 row-cols-md-1 g-4 justify-content-center">
+            <div class="col">
+              <div class="card event-card h-100">
+                <img src="./images/events/custom.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h1 class="card-title">Custom Parties</h1>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, nesciunt!</p>
+                  <a href="#" class="my-a">
+                    <h2 class="price">⇦ Book Now ⇨</h2>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item ">
+          <div class="row row-cols-1 row-cols-md-1 g-4 justify-content-center">
+          <div class="col">
+            <div class="card event-card h-100">
+              <img src="./images/events/private.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h1 class="card-title">Private Parties</h1>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, nesciunt!</p>
+                <a href="#" class="my-a">
+                  <h2 class="price">⇦ Book Now ⇨</h2>
+                </a>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      
+        <div class="carousel-item ">
+          <div class="row row-cols-1 row-cols-md-1 g-4 justify-content-center">
+          <div class="col">
+            <div class="card event-card h-100">
+              <img src="./images/events/birthday.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h1 class="card-title">Birthday Parties</h1>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, nesciunt!</p>
+                <a href="#" class="my-a">
+                  <h2 class="price">⇦ Book Now ⇨</h2>
+                </a>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+
+
+        <div class="carousel-item ">
+          <div class="row row-cols-1 row-cols-md-1 g-4 justify-content-center">
+            <div class="col">
+              <div class="card event-card h-100">
+                <img src="./images/events/charity.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h1 class="card-title">Charity Events</h1>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, nesciunt!</p>
+                  <a href="#" class="my-a">
+                    <h2 class="price">⇦ Book Now ⇨</h2>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item ">
+          <div class="row row-cols-1 row-cols-md-1 g-4 justify-content-center">
+          <div class="col">
+            <div class="card event-card h-100">
+              <img src="./images/events/sports.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h1 class="card-title">Sports Arena</h1>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, nesciunt!</p>
+                <a href="#" class="my-a">
+                  <h2 class="price">⇦ Book Now ⇨</h2>
+                </a>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+
+
+        <div class="carousel-item ">
+          <div class="row row-cols-1 row-cols-md-1 g-4 justify-content-center">
+          <div class="col">
+            <div class="card event-card h-100">
+              <img src="./images/events/night theme.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h1 class="card-title">Theme Nights</h1>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, nesciunt!</p>
+                <a href="#" class="my-a">
+                  <h2 class="price">⇦ Book Now ⇨</h2>
+                </a>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+       
+        
+       
+
+
+      </div>
+      <button class="carousel-control-prev front" type="button" data-bs-target="#carouselExampleAutoplaying3"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next front" type="button" data-bs-target="#carouselExampleAutoplaying3"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+
+
+<!-- EVENTS -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section id="contact" class=" mx-3 my-5 rounded">
+    <div class="container px-4 py-3">
+      <div class="row g-lg-5 py-5 align-items-center">
+        <div class="col-lg-7 text-center text-lg-start">
+          <h1 class="my-2 fh-1 display-5 fw-bold sf"><span class="text-decoration-underline ">Cont</span>act Us</h1>
+          <p class="col-lg-10 fs-5">Message me at any time and I'll Reply you as soon as possible. Lorem ipsum dolor sit
+            amet.</p>
+          <div class="col bb-des">
+            <div class="row mt-5 ">
+              <h4><img src="./images/icons/address.png" alt="" class="img-fluid me-3" width="40rem">Lorem ipsum dolor
+                sit amet consectetur.</h4>
+            </div>
+            <div class="row mt-3 ">
+              <h4><img src="./images/icons/email.png" alt="" class="img-fluid me-3" width="40rem">web.rafay@gmail.com
+              </h4>
+            </div>
+            <div class="row my-4  ">
+              <h4><img src="./images/icons/phone.png" alt="" class="img-fluid me-3" width="40rem">111-222-333-4</h4>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-10 mx-auto col-lg-5">
+          <form class="rounded-3 f-mine">
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control contact-form" id="contact-item1" placeholder="Enter your name">
+              <label for="floatingInput text-light">&nbsp;<i class="fa-solid fa-user text-danger"></i>&nbsp; Full Name</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control contact-form" id="contact-item2" placeholder="Enter your email address">
+              <label for="floatingInput text-light">&nbsp;<i class="fa-solid fa-envelope text-danger"></i>&nbsp; Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+              <textarea class="form-control contact-form" placeholder="Leave a comment here" id="contact-item3"
+                style="height: 150px"></textarea>
+              <label for="floatingTextarea text-light">&nbsp;<i class="fa-solid fa-message text-danger"></i>&nbsp; Message</label>
+            </div>
+            <button class="w-100 btn btn-lg btn-danger" type="submit">Send <i class="fa-solid fa-paper-plane ms-1"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <section id="gallery" class="">
+
+    <h1 class="my-5 text-center fh-1 heading" id="menu"><span class="text-decoration-underline ">Gal</span>lery</h1>
+    <div id="carouselExampleAutoplayingGallery" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./images/Gallery/g1.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/Gallery/g2.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/Gallery/g3.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/Gallery/g4.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/Gallery/g5.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev prev" type="button" data-bs-target="#carouselExampleAutoplayingGallery"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next next" type="button" data-bs-target="#carouselExampleAutoplayingGallery"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="footer">
+
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+<img src="./images/icons/favicon.png" alt="" width="30">
+
+        </a>
+        <span class="mb-3 mb-md-0 text-muted">© 2023 Burger Bar</span>
+      </div>
+  
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3"><a class="text-muted" href="https://www.facebook.com/profile.php?id=100085082981526"><img
+              src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Facebook_f_logo_%282021%29.svg/640px-Facebook_f_logo_%282021%29.svg.png"
+              alt="" height="32rem"></a></li>
+        <li class="ms-3"><a class="text-muted" href="https://www.instagram.com/rafayar_/"><img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1200px-Instagram_logo_2022.svg.png"
+              alt="" height="32rem"></a></li>
+        <li class="ms-3"><a class="text-muted" href="#"><img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4n_urpJ9XpwOTdzBVbGvactwHrPagYQrTJPYjxfxLGkSyu7nJZVqRVGAeohnPgKMrnKE&usqp=CAU"
+              alt="" height="32rem"></a></li>
+      </ul>
+    </footer>
+  </div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</html>
