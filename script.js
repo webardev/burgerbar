@@ -9,6 +9,6 @@ let loader = document.getElementById("preloader")
 // }, 2928)
 
 
-// window.addEventListener("load", function(){
-//   loader.style.display = "none"
-// })
+window.addEventListener("load", function(){
+  loader.style.display = "none"
+})
